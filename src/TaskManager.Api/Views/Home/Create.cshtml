@@ -1,0 +1,20 @@
+@model TaskItem
+@{
+    ViewData["Title"] = "Новая задача";
+}
+
+<section class="page-head">
+    <div>
+        <p class="eyebrow">Создание</p>
+        <h1>Новая задача</h1>
+    </div>
+    <a class="text-link" asp-action="Index">К списку</a>
+</section>
+
+<form class="card" asp-action="Create" method="post">
+    <partial name="_TaskForm" model="Model" />
+    <div class="form-actions">
+        <button type="submit">Сохранить</button>
+        <a asp-action="Index">Отмена</a>
+    </div>
+</form>

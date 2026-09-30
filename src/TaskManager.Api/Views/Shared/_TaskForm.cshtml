@@ -1,0 +1,28 @@
+@model TaskItem
+
+<div asp-validation-summary="ModelOnly" class="validation-summary"></div>
+
+<div class="field">
+    <label asp-for="Title"></label>
+    <input asp-for="Title" autocomplete="off" />
+    <span asp-validation-for="Title"></span>
+</div>
+
+<div class="field">
+    <label asp-for="Description"></label>
+    <textarea asp-for="Description" rows="5"></textarea>
+    <span asp-validation-for="Description"></span>
+</div>
+
+<div class="field">
+    <label asp-for="DueDate"></label>
+    <input asp-for="DueDate" asp-format="{0:yyyy-MM-dd}" type="date" />
+    <span asp-validation-for="DueDate"></span>
+</div>
+
+<div class="field field-check">
+    <label>
+        <input asp-for="IsDone" />
+        <span>Выполнена</span>
+    </label>
+</div>
